@@ -22,7 +22,7 @@ class __ArrExtension extends Array
     }
     static Enum_Function(self, Function) {
         for k, v in self 
-            (Function.MaxParams) > 1 ? (Function)(k, v) : (Function)(v)
+            (Function.MaxParams) > 1 ? (Function)(v, k) : (Function)(v)
     }
     static Filter(self, Start, End) {
         loop end - Start + 1
