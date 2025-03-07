@@ -1,4 +1,4 @@
-﻿/************************************************************************
+/************************************************************************
  * @description Extension for the Array class
  * @author Myurius
  * @date 2025/02/22
@@ -20,7 +20,7 @@ class __ArrExtension extends Array
                 return key
         return 0
     }
-    static Enum_Function(self, Function) {
+    static ForEach(self, Function) {
         for k, v in self 
             (Function.MaxParams) > 1 ? (Function)(v, k) : (Function)(v)
     }
