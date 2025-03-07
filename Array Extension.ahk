@@ -8,11 +8,11 @@ class __ArrExtension extends Array
 {
     static __New() {
         super.Prototype.DefineProp("Contains", {Call: (self, Item) => this.Contains(self, Item)})
-        super.Prototype.DefineProp("Enum_Function", {Call: (self, Function) => this.Enum_Function(self, Function)})
+        super.Prototype.DefineProp("ForEach", {Call: (self, Function) => this.ForEach(self, Function)})
         super.Prototype.DefineProp("Filter", {Call: (self, Start, End) => this.Filter(self, Start, End)})
         super.Prototype.DefineProp("Pop", {Call: (self, Index) => this.Pop(self, Index)})
         super.Prototype.DefineProp("Reverse", {Call: (self) => this.Reverse(self)})
-        super.Prototype.DefineProp("Type_Of", {Get: (self, Index) => this.Type_Of[self, Index]})
+        super.Prototype.DefineProp("TypeOf", {Get: (self, Index) => this.TypeOf[self, Index]})
     }
     static Contains(self, Item) {
         for key, value in self
@@ -38,7 +38,7 @@ class __ArrExtension extends Array
             arr.InsertAt(1, value)
         return arr
     }
-    static Type_Of[self, Index] {
+    static TypeOf[self, Index] {
         get => Type(self[Index])
     }
 }
